@@ -8,10 +8,10 @@ nav {
     margin: 0px auto 1%;
     width: 590px;
     height: 50px;
-    background: #34495e;
+    background: #65a4c3;
     border-radius: 8px;
     font-size: 0;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 3px 0 #2075a0;
 }
 
 nav a {
@@ -27,10 +27,11 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #1abc9c;
+    background-color: #e2edff;
     border-radius: 8px;
     margin: 0 3px;
     transition: all .5s ease 0s;
+    color: black;
 }
 
 /* nav .animation {
