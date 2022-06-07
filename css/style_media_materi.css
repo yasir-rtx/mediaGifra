@@ -1,3 +1,23 @@
+/* Home */
+body {
+    background: url('../img/img3.png');
+    background-size: cover;
+}
+
+.materi {
+    margin-top: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Media navbar */
 body {
     font-family: 'Open Sans, sans-serif';
@@ -34,24 +54,9 @@ nav a:hover {
     color: black;
 }
 
-/* nav .animation {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    z-index: 0;
-    background: #1abc9c;
-    width: 100px;
-    border-radius: 8px;
-} */
-
 a:nth-child(1) {
     width: 100px;
 }
-
-/* nav .start-home, a:nth-child(1):hover~.animation {
-    width: 100px;
-    left: 0;
-} */
 
 a:nth-child(2) {
     width: 100px;
