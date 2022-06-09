@@ -22,30 +22,44 @@
         margin: 0 5px;
       }
       nav a:hover {
-        color: red !important;
+        color: white !important;
         border-radius: 5px;
-        background-color: white;
+        background-color: #e2edff;
+      }
+      .navColor {
+        background-color: #65a4c3 !important;
+      }
+      .bi {
+        color: black;
+      }
+      :root {
+        --text-color: #e2edff;
+        --text-color2: black;
+      }
+      .custom-tooltip {
+        --bs-tooltip-bg: var(--text-color);
+        --bs-tooltip-color: (var(--text-color2));
       }
     </style>
   </head>
   <body>
     
-    <nav class="navbar navbar-expand navbar-dark bg-dark text-white fixed-bottom mb-md-2">
+    <nav class="navbar navbar-expand navbar-dark bg-dark text-white fixed-bottom mb-md-2 navColor">
       <div class="navbar-nav nav-justified container justify-content-center">
         <div class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Home" style="padding-left: 20px;"><i class="bi bi-house-door"></i></a>
+          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Home" data-bs-custom-class="custom-tooltip"><i class="bi bi-house-door"></i></a>
         </div>
         <div class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Kompetisi"><i class="bi bi-house-door"></i></a>
+          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Kompetisi" data-bs-custom-class="custom-tooltip"><i class="bi bi-card-checklist"></i></a>
         </div>
         <div class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Materi"><i class="bi bi-house-door"></i></a>
+          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Materi" data-bs-custom-class="custom-tooltip"><i class="bi bi-book"></i></a>
         </div>
         <div class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Evaluasi"><i class="bi bi-house-door"></i></a>
+          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Evaluasi" data-bs-custom-class="custom-tooltip"><i class="bi bi-pencil-square"></i></a>
         </div>
         <div class="nav-item">
-          <a class="nav-link" href="aboutme.html" data-bs-toggle="tooltip" data-bs-placement="top" title="About Me" style="padding-right: 20px;" target="_blank"><i class="bi bi-house-door"></i></a>
+          <a class="nav-link" href="aboutme.html" data-bs-toggle="tooltip" data-bs-placement="top" title="About Me"target="_blank" data-bs-custom-class="custom-tooltip"><i class="bi bi-person"></i></a>
         </div>
       </div>
     </nav>
