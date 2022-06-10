@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Kompetisi</title>
+    <title>Kompetensi</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,39 +11,12 @@
 
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <style>
-      nav {
-        border-radius: 5px;
-        margin: 0 25%;
-      }
-      nav a {
-        text-decoration: none;
-        color: white;
-        margin: 0 5px;
-      }
-      nav a:hover {
-        border-radius: 5px;
-        background-color: #e2edff;
-        color: #000 !important;
-      }
-      .navColor {
-        background-color: #65a4c3 !important;
-      }
-      .bi {
-        color: rgb(255, 255, 255);
-      }
-      :root {
-        --text-color: #e2edff;
-        --text-color2: black;
-      }
-      .custom-tooltip {
-        --bs-tooltip-bg: var(--text-color);
-        --bs-tooltip-color: (var(--text-color2));
-      }
-    </style>
+    
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="css/styleMedia.css">
   </head>
   <body>
-     
+    <!-- Navbar Beginning -->
     <nav class="navbar navbar-expand navbar-dark bg-dark text-white fixed-bottom mb-md-2 navColor">
       <div class="navbar-nav nav-justified container justify-content-center">
         <div class="nav-item">
@@ -63,9 +36,57 @@
         </div>
       </div>
     </nav>
+    <!-- Navbar Ending -->
 
-    <div class="hello text-center mt-5">
-      <h1>KOMPETISI</h1>
+    <div class="container" style="margin-top: 10%;">
+      <!-- Kompetensi dasar -->
+      <div class="row text-center mb-1">
+        <div class="col">
+          <h1>KOMPETENSI DASAR</h1>
+        </div>
+      </div>
+      <div class="row text-center mb-3">
+        <div class="col">
+          <p>Menjelaskan sistem persamaan linear dua variabel dan penyelesaiannya yang dihubungkan dengan masalah kontekstual.</p>
+        </div>
+      </div>
+
+      <!-- Indikator Pembelajaran -->
+      <div class="row text-center mt-3 mb-1">
+        <div class="col">
+          <h1>INDIKATOR PEMBELAJARAN</h1>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-2">
+        <div class="col-sm-3 mb-3">
+          <!-- Indikator 1 -->
+          <div class="card bg-opacity-50 bg-primary" style="width: 18rem; min-height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">Pertama</h5>
+              <p class="card-text">Mengidentifikasi sistem persamaan linear dua variabel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mb-3">
+          <!-- Indikator 2 -->
+          <div class="card bg-opacity-50 bg-success" style="width: 18rem; min-height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">Kedua</h5>
+              <p class="card-text">Membuat model matematika yang berkaitan dengan sistem persamaan linear dua variabel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mb-3">
+          <!-- Indikator 3 -->
+          <div class="card bg-opacity-50 bg-danger" style="width: 18rem; min-height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">Ketiga</h5>
+              <p class="card-text">Menentukan penyelesain sistem persamaan linear dua variabel menggunakan metode grafik, subtitusi, eliminasi, dan campuran(eliminasi-subtitusi)</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
