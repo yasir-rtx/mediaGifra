@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bentuk Umum SPLDV</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="css/styleMedia.css">
+    <style>
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: #65a4c3;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            z-index: 10;
+            line-height: 50px;
+            text-align: center;
+        }
+        .box:hover{
+            background-color: #e2edff;
+            color: black !important;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        alert("Jika anda menggunakan smartphone rotasi layar anda dan jika anda menggunakan laptop sebaiknya gunakan tampilan fullscreen");
+    </script>
+    <a href="materi.html"><div class="box"><i class="bi bi-book"></i></div></a>
+
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade vh-100" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div  data-bs-interval="10000000" class="carousel-item active">
+            <img src="img/hal1.png" class="d-block w-100" alt="">
+          </div>
+          <div  data-bs-interval="10000000" class="carousel-item">
+            <img src="img/haL2.png" class="d-block w-100" alt="">
+          </div>
+          <div  data-bs-interval="10000000" class="carousel-item">
+            <img src="img/hal3.png" class="d-block w-100" alt="">
+          </div>
+          <div  data-bs-interval="10000000" class="carousel-item">
+            <img src="img/hal4.png" class="d-block w-100" alt="">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+</html>
