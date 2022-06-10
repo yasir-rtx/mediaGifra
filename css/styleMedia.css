@@ -32,3 +32,8 @@ nav a:hover {
     --bs-tooltip-bg: var(--text-color);
     --bs-tooltip-color: (var(--text-color2));
 }
+
+.fullScreen {
+    width: 100vh;
+    height: 100vh;
+}
