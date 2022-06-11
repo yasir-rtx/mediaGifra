@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluasi</title>
+
+    <!-- My Own CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid d-flex align-items-center" style="min-height: 100vh; background-color: #e2edff;">
+        <div class="container-fluid box text-white" style="background-color: #65a4c3;">
+            <h1 style="font-family: 'Courier New', Courier, monospace;">EVALUASI</h1><hr>
+            <div id="question-title">QUESTION TITLE</div>
+            <div class="mb-3" id="option-list">
+                <!-- <input type="radio" id="${i}" name="question_title">${optionArray[i]}</input> -->
+            </div>
+            <div id="score-area">Score Area</div>
+            <button class="btn btn-primary rounded-pill" id="submit">SUBMIT</button><br>
+            <button class="btn btn-primary rounded-pill" id="start">START</button><br>
+            <button class="btn btn-primary rounded-pill" id="coba-lagi">Coba Lagi</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Javascript -->
+    <script src="db.js"></script>
+    <script>
+        // Defining Varibles
+        let questionNo = 0;
+        let score = 0;
+        let question_title = document.getElementById('question-title');
+        let option_list = document.getElementById('option-list');
+        let score_area = document.getElementById('score-area');
+        let btn_submit = document.getElementById('submit');
+        let start = document.getElementById('start');
+        let coba_lagi = document.getElementById('coba-lagi');
+
+        // oncreate we need to hide few items
+        hideItems(question_title);
+        hideItems(option_list);
+        hideItems(btn_submit);
+        hideItems(coba_lagi);
+        hideItems(score_area);
+        // hideItems(start);
+
+        // start btn on click
+        start.addEventListener('click', function () {
+            showItems(question_title);
+            showItems(option_list);
+            showItems(btn_submit);
+            laodQustion();
+            hideItems(start)
+        });
+
+        function laodQustion() {
+            // check if question available to ask
+            if (questionNo < data.length) {
+                let q = data[questionNo].qs;
+                let optionArray = data[questionNo].options; // array of option
+
+                // display question
+                question_title.innerText = q;
+
+                // display option
+                option_list.innerText = "";
+                for (let i = 0; i < optionArray.length; i++) {
+                    option_list.innerHTML = option_list.innerHTML + 
+                    `
+                    <input type="radio" id="${i}" name="${question_title}">${optionArray[i]}</input><br>
+                    `;
+                }
+            } else {
+                console.log("no more question");
+                // show score
+                showItems(score_area);
+                score_area.innerText = "Your score is : " + score;
+
+                // hide buttom submit
+                hideItems(btn_submit);
+                showItems(coba_lagi);
+            }
+            // Debug db.js
+            // alert(data[questionNo].qa);
+            // alert(data[questionNo].options);
+        }
+
+        coba_lagi.addEventListener('click', function() {
+            location.reload();
+        })
+
+        btn_submit.addEventListener('click', function() {
+            // get checked id
+            let id = getCheckedId();
+
+            // compare id to id database
+            try {
+                if (id == data[questionNo].answerId) {
+                    // correct answer
+                    score++;
+                    console.log("correct answer");
+                }
+            } catch (error) {}
+
+            // next question
+            questionNo++;
+
+            // load question
+            laodQustion();
+        })
+
+        function getCheckedId() {
+            for (let i = 0; i < 4; i++) {
+                if (document.getElementById(i).checked) {
+                    console.log("you selected : " + i);
+                    return i;
+                }
+            }
+        }
+
+        function hideItems(element) {
+            element.style.display = "none";
+        }
+        function showItems(element) {
+            element.style.display = "block";
+        }
+    </script>
+</body>
+</html>
