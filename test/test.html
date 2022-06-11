@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <!-- My Own CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <style>
+        .salah {
+            border: 1px solid red;
+            box-shadow: 0px 0px 10px red;
+        }
+        .benar {
+            border: 1px solid lime;
+            box-shadow: 0px 0px 10px lime;
+        }
+        table, th, tr, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <p>Contoh soal</p>
+        <p>Tentukan penyelesaian dari sistem persamaan linear dua variabel berikut dengan metode grafik.
+        </p>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center" style="min-height: 100vh;">
+        <div class="container-fluid box">
+            <table border="1" cellpadding="25px">
+                <th></th>
+                <th>X</th>
+                <th>Y</th>
+                <th>X,Y</th>
+                <tr>
+                    <th>X</th>
+                    <td><input id="x" class="" type="text"></td>
+                    <td><input type="text" placeholder="0" disabled></td>
+                    <td><input id="xy1" type="text"></td>
+                </tr>
+                <tr>
+                    <th>Y</th>
+                    <td><input type="text" placeholder="0" disabled></td>
+                    <td><input id="y" type="text"></td>
+                    <td><input id="xy2" type="text"></td>
+                </tr>
+            </table><br>
+            <button id="submit" type="submit">SUBMIT</button>
+            <button type="submit" id="clear">Bersihkan</button>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+        const x = document.getElementById("x");
+        const y = document.getElementById("y");
+        const xy1 = document.getElementById("xy1");
+        const xy2 = document.getElementById("xy2");
+        const submit = document.getElementById("submit");
+        const clear = document.getElementById("clear")
+        
+        submit.addEventListener('click', function() {
+            // Debug
+            // console.log(x.value);
+            // console.log(y.value);
+            // console.log(xy1.value);
+            // console.log(xy2.value);
+            
+            // cek nilai x
+            if (x.value == 1) {
+                x.classList.add('benar')
+            } else {
+                x.classList.add('salah')
+            }
+
+            // cek nilai x
+            if (y.value == 1) {
+                y.classList.add('benar')
+            } else {
+                y.classList.add('salah')
+            }
+
+            // cek nilai xy1
+            if (xy1.value === "1,0") {
+                xy1.classList.add('benar')
+            } else {
+                xy1.classList.add('salah')
+            }
+
+            // cek nilai xy2
+            if (xy2.value === "0,1") {
+                xy2.classList.add('benar')
+            } else {
+                xy2.classList.add('salah')
+            }
+        })
+
+        clear.addEventListener('click', function() {
+            location.reload();
+        })
+    </script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
