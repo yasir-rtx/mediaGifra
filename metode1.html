@@ -15,6 +15,41 @@
 
     <!-- My Own CSS -->
     <link rel="stylesheet" href="css/styleMedia.css">
+
+    
+    <style>
+        .salah {
+            border: 1px solid red;
+            box-shadow: 0px 0px 10px red;
+        }
+        .benar {
+            border: 1px solid lime;
+            box-shadow: 0px 0px 10px lime;
+        }
+        table, th, tr, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        input {
+            width: 50px;
+        }
+        .kotakHijau {
+            background-color: lime;
+            width: 150px;
+            padding: 5px;
+            text-align: center;
+        }
+        .kotakSalmon {
+            background-color: #f5dcdc;
+        }
+        .penyelesaian {
+            background-color: #c73d3d;
+            width: 150px;
+            text-align: center;
+            padding: 5px;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +66,63 @@
                 <img src="img/materi/mg1.png" class="d-block w-100" alt="">
             </div>
             <div data-bs-interval="10000000" class="carousel-item">
-                <img src="img/materi/mg2.png" class="d-block w-100" alt="">
+                <!-- Halaman 2 -->
+                <div class="container">
+                    <p class="kotakHijau mt-3">Contoh soal</p>
+                    <div class="card">
+                        <div class="card-body kotakSalmon">
+                            <p>Tentukan penyelesaian dari sistem persamaan linear dua variabel berikut dengan metode grafik.</p>
+                            <img src="../img/persamaan1.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div class="penyelesaian mt-3">
+                        <p>Penyelesaian :</p>
+                    </div>
+                    <table border="1" cellpadding="25px" class="mt-3">
+                        <th></th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>X,Y</th>
+                        <tr>
+                            <th>X</th>
+                            <td><input id="x" class="" type="text"></td>
+                            <td><input type="text" placeholder="0" disabled></td>
+                            <td><input id="xy1" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>Y</th>
+                            <td><input type="text" placeholder="0" disabled></td>
+                            <td><input id="y" type="text"></td>
+                            <td><input id="xy2" type="text"></td>
+                        </tr>
+                    </table><br>
+                    <button class="btn btn-primary" id="submit" type="submit">Periksa</button>
+                    <button class="btn btn-danger" type="submit" id="clear">Bersihkan</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#hint"><i class="bi bi-lightbulb"></i></button>
+                </div>
+            
+                <!-- Hint -->
+                <div class="modal fade" id="hint" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" style="background-color: rgb(126, 230, 190);">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Petunjuk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Untuk menentukan nilai x, jika y=0. Maka substitusikan y=0 ke persamaan x-y=1 <br>
+                            x - y = 1 <br>
+                            x - 0 = 1 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 1 <br>
+                            Sama halnya untuk menentukan nilai y, maka x = 0.
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
             <div data-bs-interval="10000000" class="carousel-item">
                 <img src="img/materi/mg3.png" class="d-block w-100" alt="">
@@ -61,6 +152,54 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <script>
+        const x = document.getElementById("x");
+        const y = document.getElementById("y");
+        const xy1 = document.getElementById("xy1");
+        const xy2 = document.getElementById("xy2");
+        const submit = document.getElementById("submit");
+        const clear = document.getElementById("clear")
+        
+        submit.addEventListener('click', function() {
+            // Debug
+            // console.log(x.value);
+            // console.log(y.value);
+            // console.log(xy1.value);
+            // console.log(xy2.value);
+            
+            // cek nilai x
+            if (x.value == 1) {
+                x.classList.add('benar')
+            } else {
+                x.classList.add('salah')
+            }
+
+            // cek nilai y
+            if (y.value == -1) {
+                y.classList.add('benar')
+            } else {
+                y.classList.add('salah')
+            }
+
+            // cek nilai xy1
+            if (xy1.value === "1,0") {
+                xy1.classList.add('benar')
+            } else {
+                xy1.classList.add('salah')
+            }
+
+            // cek nilai xy2
+            if (xy2.value === "0,1") {
+                xy2.classList.add('benar')
+            } else {
+                xy2.classList.add('salah')
+            }
+        })
+
+        clear.addEventListener('click', function() {
+            location.reload();
+        })
     </script>
 </body>
 
