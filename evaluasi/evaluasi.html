@@ -23,7 +23,8 @@
             <div id="score-area">Score Area</div>
             <button class="btn btn-primary rounded-pill" id="submit">SUBMIT</button><br>
             <button class="btn btn-primary rounded-pill" id="start">START</button><br>
-            <button class="btn btn-primary rounded-pill" id="coba-lagi">Coba Lagi</button>
+            <button class="btn btn-primary rounded-pill" id="coba-lagi">COBA LAGI</button><br>
+            <button class="btn btn-primary rounded-pill" id="home"><a href="../index.html" style="text-decoration: none; color: white;">HOME</a></button>
         </div>
     </div>
 
@@ -42,6 +43,7 @@
         let btn_submit = document.getElementById('submit');
         let start = document.getElementById('start');
         let coba_lagi = document.getElementById('coba-lagi');
+        let home = document.getElementById('home');
 
         // oncreate we need to hide few items
         hideItems(question_title);
@@ -49,6 +51,7 @@
         hideItems(btn_submit);
         hideItems(coba_lagi);
         hideItems(score_area);
+        hideItems(home);
         // hideItems(start);
 
         // start btn on click
@@ -58,6 +61,7 @@
             showItems(btn_submit);
             laodQustion();
             hideItems(start)
+            hideItems(home);
         });
 
         function laodQustion() {
@@ -86,6 +90,7 @@
                 // hide buttom submit
                 hideItems(btn_submit);
                 showItems(coba_lagi);
+                showItems(home);
             }
             // Debug db.js
             // alert(data[questionNo].qa);
