@@ -14,6 +14,11 @@
     
     <!-- My Own CSS -->
     <link rel="stylesheet" href="css/styleMedia.css">
+    <style>
+      .textHitam {
+        color: black !important;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar Beginning -->
@@ -29,7 +34,7 @@
           <a class="nav-link" href="materi.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Materi" data-bs-custom-class="custom-tooltip"><i class="bi bi-book"></i></a>
         </div>
         <div class="nav-item">
-          <a class="nav-link" href="evaluasi.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Evaluasi" data-bs-custom-class="custom-tooltip"><i class="bi bi-pencil-square"></i></a>
+          <a class="nav-link" href="evaluasi/evaluasi.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Evaluasi" data-bs-custom-class="custom-tooltip"><i class="bi bi-pencil-square"></i></a>
         </div>
         <div class="nav-item">
           <a class="nav-link" href="aboutme.html" data-bs-toggle="tooltip" data-bs-placement="top" title="About Me"target="_blank" data-bs-custom-class="custom-tooltip"><i class="bi bi-person"></i></a>
@@ -49,7 +54,7 @@
         <div class="col-md-3 mb-1">
           <a href="materi1.html" style="text-decoration: none;">
             <div class="card text-center" style="width: 18rem; min-height: 200px;">
-              <img src="img/materi1.jpg" alt="">
+              <img src="img/iconMateri/bentuk umum.jpg" alt="">
               <div class="card-body">
                 <p class="card-text">Bentuk Umum Sistem Persamaan Linear Dua Variabel</p>
               </div>
@@ -59,7 +64,7 @@
         <div class="col-md-3 mb-1">
           <a href="materi2.html" style="text-decoration: none;">
             <div class="card text-center" style="width: 18rem; min-height: 200px;">
-              <img src="img/materi1.jpg" alt="">
+              <img src="img/iconMateri/model matematika.jpg" alt="">
               <div class="card-body">
                 <p class="card-text">Model Matematika  Sistem Persamaan Linear Dua Variabel</p>
               </div>
@@ -69,7 +74,7 @@
         <div class="col-md-3 mb-1">
           <a href="materi3.html" style="text-decoration: none;">
             <div class="card text-center" style="width: 18rem; min-height: 200px;">
-              <img src="img/materi1.jpg" alt="">
+              <img src="img/iconMateri/meode penyelesaian.jpg" alt="">
               <div class="card-body">
                 <p class="card-text">Metode Penyelesaian  Sistem Persamaan Linear Dua Variabel</p>
               </div>
@@ -77,7 +82,127 @@
           </a>
         </div>
       </div>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <h1>TEACHER CONTACTS</h1>
+        </div>
+      </div>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalToggle"><i class="bi bi-telephone"></i></button>
+        </div>
+      </div>
     </div>
+
+    <!-- Contact -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- Gifra -->
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-5">
+                  <!-- Card Panel -->
+                  <div class="card" style="background-color: #65a4c3;">
+                    <div class="card-body text-center textHitam">
+                      <i class="bi bi-person-lines-fill text-dark"></i>
+                      <h5 class="mt-3">Gifra Rasyidah</h5>
+                      <p>Admin Website</p>
+                    </div>
+                  </div>
+                  <!-- available -->
+                  <ul class="list-group mt-3">
+                    <li class="list-group-item"><h4>Contacs</h4></li>
+                    <li class="list-group-item text-center"><a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Email" data-bs-content="gifrarasyidah@gmail.com"><i class="bi bi-envelope-fill text-black"></i></a></li>
+                    <li class="list-group-item text-center"><a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Whatsapp" data-bs-content="+6283180268450"><i class="bi bi-whatsapp text-black"></i></a></li>
+                    <li class="list-group-item text-center"><a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Instagram" data-bs-content="@gifra_rasyidah04"><i class="bi bi-instagram text-black"></i></a></li>
+                    
+                  </ul>
+                </div>
+    
+                <!-- Chat -->
+                <div class="col-7">
+                  <h4>Chat Whatsapp</h4>
+                  <form action="whatsapp/gifra.php" method="post" target="_blank">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingNama" name="name" placeholder="name@example.com" required>
+                      <label for="floatingNama">Nama Lengkap</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <textarea type="text" class="form-control" id="floatingPesan" name="message" placeholder="Pesan" style="height: 200px;" required></textarea>
+                      <label for="floatingPesan">Pesan</label>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Pak Des</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guru Pariaman -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-5">
+                  <!-- Card Panel -->
+                  <div class="card" style="background-color: #65a4c3;">
+                    <div class="card-body text-center textHitam">
+                      <i class="bi bi-person-lines-fill text-dark"></i>
+                      <h5 class="mt-3">Desfirman, S.Pd</h5>
+                      <p>Guru Matematika</p>
+                    </div>
+                  </div>
+                  <!-- available -->
+                  <ul class="list-group mt-3">
+                    <li class="list-group-item"><h4>Contacs</h4></li>
+                    <!-- <li class="list-group-item text-center"><a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Email" data-bs-content="gifrarasyidah@gmail.com"><i class="bi bi-envelope-fill text-black"></i></a></li> -->
+                    <li class="list-group-item text-center"><a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Whatsapp" data-bs-content="+6281363015280"><i class="bi bi-whatsapp text-black"></i></a></li>
+                    <!-- <li class="list-group-item text-center"><a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Instagram" data-bs-content="@gifra_rasyidah04"><i class="bi bi-instagram text-black"></i></a></li> -->
+                    
+                  </ul>
+                </div>
+    
+                <!-- Chat -->
+                <div class="col-7">
+                  <h4>Chat Whatsapp</h4>
+                  <form action="whatsapp/des.php" method="post" target="_blank">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingNama" name="name" placeholder="name@example.com" required>
+                      <label for="floatingNama">Nama Lengkap</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <textarea type="text" class="form-control" id="floatingPesan" name="message" placeholder="Pesan" style="height: 200px;" required></textarea>
+                      <label for="floatingPesan">Pesan</label>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Buk Gifra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -85,6 +210,10 @@
     <script>
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+      const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     </script>
   </body>
 </html>
