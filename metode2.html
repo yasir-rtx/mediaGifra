@@ -15,6 +15,12 @@
 
     <!-- My Own CSS -->
     <link rel="stylesheet" href="css/styleMedia.css">
+
+    <style>
+        input {
+            width: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +28,7 @@
         // alert("Jika anda menggunakan smartphone rotasi layar anda dan jika anda menggunakan laptop sebaiknya gunakan tampilan fullscreen");
     </script>
     <a href="materi3.html">
-        <div class="box"><i class="bi bi-book"></i></div>
+        <div class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Metode" data-bs-custom-class="custom-tooltip"><i class="bi bi-book"></i></div>
     </a>
 
     <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade vh-100" data-bs-ride="true">
@@ -36,8 +42,12 @@
             <div data-bs-interval="10000000" class="carousel-item">
                 <img src="img/materi/ms3.png" class="d-block w-100" alt="">
             </div>
+            <!-- Halaman 4 -->
             <div data-bs-interval="10000000" class="carousel-item">
-                <img src="img/materi/ms4.png" class="d-block w-100" alt="">
+                <div class="container align-items-center">
+                    <h1 class="mt-5">Langkah 2 : Subtitusikan nilai x = 5/2 yang diperoleh ke salah satu persamaan. <br><br> Gunakan persamaan x - y = 1</h1><br><br>
+                    <h3>Jadi, penyelesaian dari SPLDV x - y = 1 dan 3x - y = 6 adalah ( <input type="text"> , <input type="text"> )</h3>
+                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
