@@ -15,14 +15,28 @@
 
     <!-- My Own CSS -->
     <link rel="stylesheet" href="css/styleMedia.css">
+
+    <style>
+        input {
+            width: 50px;
+        }
+        .salah {
+            border: 1px solid red;
+            box-shadow: 0px 0px 10px red;
+        }
+        .benar {
+            border: 1px solid lime;
+            box-shadow: 0px 0px 10px lime;
+        }
+    </style>
 </head>
 
 <body>
     <script>
-        // alert("Jika anda menggunakan smartphone rotasi layar anda dan jika anda menggunakan laptop sebaiknya gunakan tampilan fullscreen");
+        alert("Perhatian!\n1. Rotasi layar anda jadi landscape jika menggunakan handphone \n2. Jika anda menggunakan laptop tekan f11 untuk masuk ke tampilan fullscreen");
     </script>
     <a href="materi3.html">
-        <div class="box"><i class="bi bi-book"></i></div>
+        <div class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Metode" data-bs-custom-class="custom-tooltip"><i class="bi bi-book"></i></div>
     </a>
 
     <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade vh-100" data-bs-ride="true">
@@ -36,8 +50,12 @@
             <div data-bs-interval="10000000" class="carousel-item">
                 <img src="img/materi/me3.png" class="d-block w-100" alt="">
             </div>
+            <!-- Halaman 4 -->
             <div data-bs-interval="10000000" class="carousel-item">
-                <img src="img/materi/me3.png" class="d-block w-100" alt="">
+                <div class="container align-items-center">
+                    <h1 class="mt-5">Langkah 2 : Subtitusikan nilai x = 5/2 yang diperoleh ke salah satu persamaan. <br><br> Gunakan persamaan x - y = 1</h1><br><br>
+                    <h3>Jadi, penyelesaian dari SPLDV x - y = 1 dan 3x - y = 6 adalah ( <input type="text" id="tp1"> , <input type="text" id="tp2"> )&nbsp;<button class="btn btn-primary" id="periksa">Periksa</button></h3>
+                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -58,6 +76,22 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <!-- Periksa -->
+    <script>
+        const tp1 = document.getElementById("tp1");
+        const tp2 = document.getElementById("tp2");
+        const periksa = document.getElementById("periksa");
+
+        periksa.addEventListener('click', function() {
+            if ((tp1.value == "5/2") && (tp2.value =="3/2")) {
+                tp1.classList.add("benar");
+                tp2.classList.add("benar");
+            } else {
+                tp1.classList.add("salah");
+                tp2.classList.add("salah");
+            }
+        })
     </script>
 </body>
 
