@@ -51,12 +51,23 @@
                 <img src="img/materi/ms2.png" class="d-block w-100" alt="">
             </div>
             <div data-bs-interval="10000000" class="carousel-item">
-                <img src="img/materi/ms3.png" class="d-block w-100" alt="">
+                <div class="container">
+                    <div class="ms-3 ps-3" style="padding-left: 30px;">
+                        <h1>Subtitusikan nilai y ke persamaan 3x - y = 6</h1><br><br>
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3x - y = 6</h2>
+                        <h2>3x - (x - 1) = 6</h2>
+                        <h2>&nbsp;3x - x + 1 = 6</h2>
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2x + 1 = 6 <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#petunjuk1"><i class="bi bi-lightbulb"></i></button></h2>
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2x = 5 <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#petunjuk2"><i class="bi bi-lightbulb"></i></button></h2>
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 5/2</h2>
+                    </div>
+                </div>
             </div>
             <!-- Halaman 4 -->
             <div data-bs-interval="10000000" class="carousel-item">
                 <div class="container align-items-center">
                     <h1 class="mt-5">Langkah 2 : Subtitusikan nilai x = 5/2 yang diperoleh ke salah satu persamaan. <br><br> Gunakan persamaan x - y = 1</h1><br><br>
+                    <img src="img/persamaan4.png" alt="" width="300px"><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#petunjuk"><i class="bi bi-lightbulb"></i></button>
                     <h3>Jadi, penyelesaian dari SPLDV x - y = 1 dan 3x - y = 6 adalah ( <input type="text" id="tp1"> , <input type="text" id="tp2"> )&nbsp;<button class="btn btn-primary" id="periksa">Periksa</button></h3>
                 </div>
             </div>
@@ -84,6 +95,60 @@
                 <div class="modal-body text-center">
                     <button id="fullscreen" class="btn btn-success" data-toggle-fullscreen><i class="bi bi-laptop"></i> Fullscreen</button>
                     <button id="fullscreen" class="btn btn-success" value="Lock Landscape" onclick="lock('landscape')"><i class="bi bi-phone"></i> Rotate</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Petunjuk -->
+    <div class="modal fade" id="petunjuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Petunjuk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/persamaan5.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Petunjuk1 -->
+    <div class="modal fade" id="petunjuk1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Petunjuk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/persamaan6.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Petunjuk2 -->
+    <div class="modal fade" id="petunjuk2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Petunjuk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/persamaan7.jpg" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
