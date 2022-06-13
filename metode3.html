@@ -51,7 +51,11 @@
                 <img src="img/materi/me2.png" class="d-block w-100" alt="">
             </div>
             <div data-bs-interval="10000000" class="carousel-item">
-                <img src="img/materi/me3.png" class="d-block w-100" alt="">
+                <div class="container">
+                    <h1>Langkah 2. Lakukan penjumlahan atau pengurangan untuk kedua persamaan untuk memperoleh nilai x</h1>
+                    <img src="img/persamaan9.png" alt="">
+                    <button class="btn btn-warning" data-bs-toggle="popover" title="Petunjuk" data-bs-content="Kalikan dengan inversnya."><i class="bi bi-lightbulb"></i></button>
+                </div>
             </div>
             <!-- Halaman 4 -->
             <div data-bs-interval="10000000" class="carousel-item">
@@ -92,7 +96,6 @@
         </div>
     </div>
 
-
     <!-- Bootstrap JavaScript Libraries -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <!-- Fullscreen -->
@@ -104,6 +107,11 @@
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <!-- Popovers -->
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     </script>
     <!-- Instruksi -->
     <script src="instruksi.js"></script>
