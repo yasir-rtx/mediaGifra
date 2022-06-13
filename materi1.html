@@ -24,7 +24,7 @@
 
 <body>
     <script>
-        alert("Perhatian!\n1. Rotasi layar anda jadi landscape jika menggunakan handphone \n2. Jika anda menggunakan laptop tekan f11 untuk masuk ke tampilan fullscreen");
+        // alert("Perhatian!\n1. Rotasi layar anda jadi landscape jika menggunakan handphone \n2. Jika anda menggunakan laptop tekan f11 untuk masuk ke tampilan fullscreen");
     </script>
     <a href="materi.html"><div class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Materi" data-bs-custom-class="custom-tooltip"><i class="bi bi-book"></i></div></a>
 
@@ -46,10 +46,40 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      
+    <!-- Instruksi -->
+    <div class="modal fade" id="notif" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Instruksi</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                  <button id="fullscreen" class="btn btn-success" data-toggle-fullscreen><i class="bi bi-laptop"></i> Fullscreen</button>
+                  <button id="fullscreen" class="btn btn-success" value="Lock Landscape" onclick="lock('landscape')"><i class="bi bi-phone"></i> Rotate</button>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let myModal = new bootstrap.Modal(document.getElementById('notif'), {});
+        myModal.show();
+    </script>
+
+    <!-- Fullscreen -->
+    <script src="fullscreen.js"></script>
+
+    <!-- Instruksi -->
+    <script src="instruksi.js"></script>
+
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

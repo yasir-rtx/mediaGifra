@@ -214,7 +214,7 @@
         </div>
     </div>
     
-    <!-- Modal -->
+    <!-- Instruksi -->
     <div class="modal fade" id="notif" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -224,7 +224,7 @@
                 </div>
                 <div class="modal-body text-center">
                     <button id="fullscreen" class="btn btn-success" data-toggle-fullscreen><i class="bi bi-laptop"></i> Fullscreen</button>
-                    <button id="fullscreen" class="btn btn-success" data-toggle-fullscreen><i class="bi bi-phone"></i> Rotate</button>
+                    <button id="fullscreen" class="btn btn-success" value="Lock Landscape" onclick="lock('landscape')"><i class="bi bi-phone"></i> Rotate</button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -243,6 +243,9 @@
 
     <!-- Fullscreen -->
     <script src="fullscreen.js"></script>
+
+    <!-- Instruksi -->
+    <script src="instruksi.js"></script>
 
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -286,7 +289,7 @@
             }
 
             // cek nilai xy2
-            if (xy2.value === "0,1") {
+            if (xy2.value === "0,-1") {
                 xy2.classList.add('benar')
             } else {
                 xy2.classList.add('salah')

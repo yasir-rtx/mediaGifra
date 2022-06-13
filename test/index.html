@@ -1,18 +1,426 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Model Grafik</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="../css/styleMedia.css">
+    
     <style>
-        body {
-            height: 100vw;
-            transform: rotate(90deg);
+        .salah {
+            border: 1px solid red;
+            box-shadow: 0px 0px 10px red;
+        }
+        .benar {
+            border: 1px solid lime;
+            box-shadow: 0px 0px 10px lime;
+        }
+        table, th, tr, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        input {
+            width: 50px;
+        }
+        .kotakHijau {
+            background-color: lime;
+            width: 150px;
+            padding: 5px;
+            text-align: center;
+        }
+        .kotakSalmon {
+            background-color: #f5dcdc;
+        }
+        .penyelesaian {
+            background-color: #c73d3d;
+            width: 150px;
+            text-align: center;
+            padding: 5px;
+            color: white;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 8% !important;
         }
     </style>
+    <script>
+        function lock (orientation) {
+            let de =document.documentElement;
+            if (de.requestFullscreen) {de.requestFullscreen();}
+            else if (de.mozrequestFullscreen) {de.mozrequestFullscreen();}
+            else if (de.webkitRequestFullscreen) {de.reqwebkitRestFullscreen();}
+            else if (de.msRequestFullscreen) {de.requestFumsRlscreen();}
+
+            screen.orientation.lock(orientation);
+        }
+    </script>
 </head>
+
 <body>
-    Hello World!
+    <script>
+        //alert("Perhatian!\n1. Rotasi layar anda jadi landscape jika menggunakan handphone \n2. Jika anda menggunakan laptop tekan f11 untuk masuk ke tampilan fullscreen");
+    </script>
+
+    <!-- <button id="fullscreen" data-toggle-fullscreen="">Fullscreen</button> -->
+
+    <a href="materi3.html">
+        <div class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Metode" data-bs-custom-class="custom-tooltip" id="metode"><i class="bi bi-book"></i></div>
+    </a>
+
+    <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade vh-100" data-bs-ride="true">
+        <div class="carousel-inner">
+            <div data-bs-interval="10000000" class="carousel-item active">
+                <img src="img/materi/mg1.png" class="d-block w-100" alt="">
+            </div>
+            <!-- Halaman 2 -->
+            <div data-bs-interval="10000000" class="carousel-item">
+                <div class="container">
+                    <p class="kotakHijau mt-3">Contoh soal</p>
+                    <div class="card">
+                        <div class="card-body kotakSalmon">
+                            <p>Tentukan penyelesaian dari sistem persamaan linear dua variabel berikut dengan metode grafik.</p>
+                            <img src="../img/persamaan1.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div class="penyelesaian mt-3">
+                        <p>Penyelesaian :</p>
+                    </div>
+                    <table border="1" cellpadding="25px" class="mt-3">
+                        <th></th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>(X,Y)</th>
+                        <tr>
+                            <th>X</th>
+                            <td><input id="x" class="" type="text"></td>
+                            <td><input type="text" placeholder="0" disabled></td>
+                            <td>(&nbsp;<input id="xy1" type="text">&nbsp;)</td>
+                        </tr>
+                        <tr>
+                            <th>Y</th>
+                            <td><input type="text" placeholder="0" disabled></td>
+                            <td><input id="y" type="text"></td>
+                            <td>(&nbsp;<input id="xy2" type="text">&nbsp;)</td>
+                        </tr>
+                    </table><br>
+                    <button class="btn btn-primary" id="submit" type="submit">Periksa</button>
+                    <button class="btn btn-danger" type="submit" id="clear">Bersihkan</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#hint1"><i class="bi bi-lightbulb"></i></button>
+                </div>
+            </div>
+
+            <!-- Halaman 3 -->
+            <div data-bs-interval="10000000" class="carousel-item">
+                <div class="container">
+                    <ul>
+                        <li><h2>3x - y =6</h2></li>
+                    </ul>
+                    <table border="1" cellpadding="25px" class="mt-3">
+                        <th></th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>(X,Y)</th>
+                        <tr>
+                            <th>X</th>
+                            <td><input id="x3" class="" type="text"></td>
+                            <td><input type="text" placeholder="0" disabled></td>
+                            <td>(&nbsp;<input id="xy3" type="text">&nbsp;)</td>
+                        </tr>
+                        <tr>
+                            <th>Y</th>
+                            <td><input type="text" placeholder="0" disabled></td>
+                            <td><input id="y3" type="text"></td>
+                            <td>(&nbsp;<input id="xy4" type="text">&nbsp;)</td>
+                        </tr>
+                    </table><br>
+                    <button class="btn btn-primary" id="submit3" type="submit">Periksa</button>
+                    <button class="btn btn-danger" type="submit" id="clear3">Bersihkan</button>
+
+                    <h4 class="mt-3">Sehingga titik potong pada sumbu X dan sumbu Y pada persamaan :</h4>
+                    <table class="mt-3 mb-3" style="border-style: none;" cellpadding="25px">
+                        <tr>
+                            <td>x - y = 1</td>
+                            <td>(&nbsp;<input id="tpx1" type="text">&nbsp;)</td>
+                            <td>dan</td>
+                            <td>(&nbsp;<input id="tpy1" type="text">&nbsp;)</td>
+                        </tr>
+                        <tr>
+                            <td>3x - y = 6</td>
+                            <td>(&nbsp;<input id="tpx2" type="text">&nbsp;)</td>
+                            <td>dan</td>
+                            <td>(&nbsp;<input id="tpy2" type="text">&nbsp;)</td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-primary" id="submit9" type="submit">Periksa</button>
+                    <button class="btn btn-danger" type="submit" id="clear9">Bersihkan</button>
+                </div>
+            </div>
+            <div data-bs-interval="10000000" class="carousel-item">
+                <div class="container">
+                    <h1>Langkah 2 : Gambarkan grafik dari kedua persamaan</h1>
+                    <h4>Tonton video di bawah ini! Kemudia tekan tombol geogebra untuk mempraktekannya!</h4>
+                    <!-- Video internal -->
+                    <!-- <video controls width="100%" height="100%">
+                        <source src="video/Menggambarkan Grafik SPLDV.mp4"/>
+                        Browsermu tidak mendukung tag ini, upgrade donk!
+                    </video> -->
+                    <!-- Youtube -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9ablHpJSb-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <h6>Klik tombol ini :</h6><a href="https://www.geogebra.org/calculator" target="_blank"><button class="btn btn-success">Geogebra</button></a>
+
+                    <!-- Video dari youtube -->
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Mnh90nRPJ6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                </div>
+            </div>
+
+            <!-- Halaman 5 -->
+            <div data-bs-interval="10000000" class="carousel-item">
+                <div class="container align-items-center">
+                    <h1 class="mt-5">Langkah 3 : Perhatikan titik perpotongan dari kedua grafik SPLDV pada langkah kedua</h1><br><br>
+                    <h3>Jadi, penyelesaian dari SPLDV x - y = 1 dan 3x - y = 6 adalah ( <input type="text" id="tp1"> , <input type="text" id="tp2"> )&nbsp;<button class="btn btn-primary" id="periksa">Periksa</button></h3>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+            
+    <!-- Hint -->
+    <div class="modal fade" id="hint1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: rgb(126, 230, 190);">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Petunjuk</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Untuk menentukan nilai x, jika y=0. Maka substitusikan y=0 ke persamaan x-y=1 <br>
+                x - y = 1 <br>
+                x - 0 = 1 <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 1 <br>
+                Sama halnya untuk menentukan nilai y, maka x = 0.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="notif" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Instruksi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <button id="fullscreen" class="btn btn-success" data-toggle-fullscreen><i class="bi bi-laptop"></i> Fullscreen</button>
+                    <button id="fullscreen" class="btn btn-success" value="Lock Landscape" onclick="lock('landscape')"><i class="bi bi-phone"></i> Rotate</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let myModal = new bootstrap.Modal(document.getElementById('notif'), {});
+        myModal.show();
+    </script>
+
+    <!-- Fullscreen -->
+    <script src="../fullscreen.js"></script>
+
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <!-- Halaman 2 -->
+    <script>
+        const x = document.getElementById("x");
+        const y = document.getElementById("y");
+        const xy1 = document.getElementById("xy1");
+        const xy2 = document.getElementById("xy2");
+        const submit = document.getElementById("submit");
+        const clear = document.getElementById("clear")
+        
+        submit.addEventListener('click', function() {
+            // Debug
+            // console.log(x.value);
+            // console.log(y.value);
+            // console.log(xy1.value);
+            // console.log(xy2.value);
+            
+            // cek nilai x
+            if (x.value == 1) {
+                x.classList.add('benar')
+            } else {
+                x.classList.add('salah')
+            }
+
+            // cek nilai y
+            if (y.value == -1) {
+                y.classList.add('benar')
+            } else {
+                y.classList.add('salah')
+            }
+
+            // cek nilai xy1
+            if (xy1.value === "1,0") {
+                xy1.classList.add('benar')
+            } else {
+                xy1.classList.add('salah')
+            }
+
+            // cek nilai xy2
+            if (xy2.value === "0,1") {
+                xy2.classList.add('benar')
+            } else {
+                xy2.classList.add('salah')
+            }
+        })
+
+        clear.addEventListener('click', function() {
+            location.reload();
+        })
+    </script>
+    <!-- Halaman 3 -->
+    <script>
+        const x3 = document.getElementById("x3");
+        const y3 = document.getElementById("y3");
+        const xy3 = document.getElementById("xy3");
+        const xy4 = document.getElementById("xy4");
+        const submit3 = document.getElementById("submit3");
+        const clear3 = document.getElementById("clear3")
+        
+        submit3.addEventListener('click', function() {
+            // Debug
+            // console.log(x.value);
+            // console.log(y.value);
+            // console.log(xy1.value);
+            // console.log(xy2.value);
+            
+            // cek nilai x
+            if (x3.value == 2) {
+                x3.classList.add('benar')
+            } else {
+                x3.classList.add('salah')
+            }
+
+            // cek nilai y
+            if (y3.value == -6) {
+                y3.classList.add('benar')
+            } else {
+                y3.classList.add('salah')
+            }
+
+            // cek nilai xy1
+            if (xy3.value === "2,0") {
+                xy3.classList.add('benar')
+            } else {
+                xy3.classList.add('salah')
+            }
+
+            // cek nilai xy2
+            if (xy4.value === "0,-6") {
+                xy4.classList.add('benar')
+            } else {
+                xy4.classList.add('salah')
+            }
+        })
+
+        clear3.addEventListener('click', function() {
+            location.reload();
+        })
+    </script>
+    <!-- Kesimpulan -->
+    <script>
+        const tpx1 = document.getElementById("tpx1");
+        const tpy1 = document.getElementById("tpy1");
+        const tpx2 = document.getElementById("tpx2");
+        const tpy2 = document.getElementById("tpy2");
+        const submit9 = document.getElementById("submit9");
+        const clear9 = document.getElementById("clear9")
+        
+        submit9.addEventListener('click', function() {
+            // Debug
+            // console.log(x.value);
+            // console.log(y.value);
+            // console.log(xy1.value);
+            // console.log(xy2.value);
+            
+            // cek nilai x
+            if (tpx1.value === "1,0") {
+                tpx1.classList.add('benar')
+            } else {
+                tpx1.classList.add('salah')
+            }
+
+            // cek nilai y
+            if (tpy1.value === "0,-1") {
+                tpy1.classList.add('benar')
+            } else {
+                tpy1.classList.add('salah')
+            }
+
+            // cek nilai xy1
+            if (tpx2.value === "2,0") {
+                tpx2.classList.add('benar')
+            } else {
+                tpx2.classList.add('salah')
+            }
+
+            // cek nilai xy2
+            if (tpy2.value === "0,-6") {
+                tpy2.classList.add('benar')
+            } else {
+                tpy2.classList.add('salah')
+            }
+        })
+
+        clear9.addEventListener('click', function() {
+            location.reload();
+        })
+    </script>
+    <!-- Periksa -->
+    <script>
+        const tp1 = document.getElementById("tp1");
+        const tp2 = document.getElementById("tp2");
+        const periksa = document.getElementById("periksa");
+
+        periksa.addEventListener('click', function() {
+            if ((tp1.value == "5/2") && (tp2.value =="3/2")) {
+                tp1.classList.add("benar");
+                tp2.classList.add("benar");
+            } else {
+                tp1.classList.add("salah");
+                tp2.classList.add("salah");
+            }
+        })
+    </script>
 </body>
 </html>
