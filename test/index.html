@@ -6,87 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .salah {
-            border: 1px solid red;
-            box-shadow: 0px 0px 10px red;
-        }
-        .benar {
-            border: 1px solid lime;
-            box-shadow: 0px 0px 10px lime;
+        body {
+            height: 100vw;
+            transform: rotate(90deg);
         }
     </style>
 </head>
 <body>
-    <h1>X - Y = 1</h1>
-    <table border="1" cellpadding="25px">
-        <th></th>
-        <th>X</th>
-        <th>Y</th>
-        <th>X,Y</th>
-        <tr>
-            <th>X</th>
-            <td><input id="x" class="" type="text"></td>
-            <td><input type="text" placeholder="0" disabled></td>
-            <td><input id="xy1" type="text"></td>
-        </tr>
-        <tr>
-            <th>Y</th>
-            <td><input type="text" placeholder="0" disabled></td>
-            <td><input id="y" type="text"></td>
-            <td><input id="xy2" type="text"></td>
-        </tr>
-    </table>
-    <button id="submit" type="submit">SUBMIT</button>
-    <button type="submit" id="clear">Bersihkan</button>
-
-    <!-- Javascript -->
-    <script>
-        const x = document.getElementById("x");
-        const y = document.getElementById("y");
-        const xy1 = document.getElementById("xy1");
-        const xy2 = document.getElementById("xy2");
-        const submit = document.getElementById("submit");
-        const clear = document.getElementById("clear")
-        
-        submit.addEventListener('click', function() {
-            // Debug
-            // console.log(x.value);
-            // console.log(y.value);
-            // console.log(xy1.value);
-            // console.log(xy2.value);
-            
-            // cek nilai x
-            if (x.value == 1) {
-                x.classList.add('benar')
-            } else {
-                x.classList.add('salah')
-            }
-
-            // cek nilai x
-            if (y.value == 1) {
-                y.classList.add('benar')
-            } else {
-                y.classList.add('salah')
-            }
-
-            // cek nilai xy1
-            if (xy1.value === "1,0") {
-                xy1.classList.add('benar')
-            } else {
-                xy1.classList.add('salah')
-            }
-
-            // cek nilai xy2
-            if (xy2.value === "0,1") {
-                xy2.classList.add('benar')
-            } else {
-                xy2.classList.add('salah')
-            }
-        })
-
-        clear.addEventListener('click', function() {
-            location.reload();
-        })
-    </script>
+    Hello World!
 </body>
 </html>
