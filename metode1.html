@@ -15,7 +15,6 @@
 
     <!-- My Own CSS -->
     <link rel="stylesheet" href="css/styleMedia.css">
-
     
     <style>
         .salah {
@@ -48,6 +47,9 @@
             text-align: center;
             padding: 5px;
             color: white;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 8% !important;
         }
     </style>
 </head>
@@ -211,10 +213,32 @@
         </div>
         </div>
     </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="notif" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Petunjuk Penggunaan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kC-brWPvYvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let myModal = new bootstrap.Modal(document.getElementById('notif'), {});
+        myModal.show();
+    </script>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
