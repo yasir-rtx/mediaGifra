@@ -53,3 +53,8 @@ nav a:hover {
     background-color: #e2edff;
     color: black !important;
 }
+
+body {
+    background-image: url(../img/BG.jpg);
+    background-size: cover;
+}
