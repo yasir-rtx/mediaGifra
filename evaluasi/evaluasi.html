@@ -116,15 +116,16 @@
             let id = getCheckedId();
 
             // Change id from user answer to ABCD
+            if (id === undefined) jawaban.push('-');
             if (id === 0) jawaban.push('A');
             if (id === 1) jawaban.push('B');
-            if (id === 2) jawaban.push('E');
+            if (id === 2) jawaban.push('C');
             if (id === 3) jawaban.push('D');
 
             // Save the key answer
             if (data[questionNo].answerId === 0) kunci.push('A');
             if (data[questionNo].answerId === 1) kunci.push('B');
-            if (data[questionNo].answerId === 2) kunci.push('E');
+            if (data[questionNo].answerId === 2) kunci.push('C');
             if (data[questionNo].answerId === 3) kunci.push('D');
 
 
@@ -148,8 +149,8 @@
             // debug kunci dan jawaban
             // console.log(kunci);
             // console.log(jawaban);
-            alert("Jawaban kamu : " + "1." + jawaban[0] + "     2." + jawaban[1] + "     3." + jawaban[2] +
-                "\nKunci Jawaban : " + "1." + kunci[0] + "     2." + kunci[1] + "     3." + kunci[2]);
+            alert("Jawaban kamu : " + "1." + jawaban[0] + "  2." + jawaban[1] + "  3." + jawaban[2]  + "  4." + jawaban[3]  + "  5." + jawaban[4]  + "  6." + jawaban[5]  + "  7." + jawaban[6]  + "  8." + jawaban[7] +
+                "\nKunci Jawaban : " + "1." + kunci[0] + "  2." + kunci[1] + "  3." + kunci[2] + "  4." + kunci[3] + "  5." + kunci[4] + "  6." + kunci[5] + "  7." + kunci[6] + "  8." + kunci[7]);
         })
 
         function getCheckedId() {
